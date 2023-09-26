@@ -1,0 +1,15 @@
+{
+  "name": "varkala",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "sass assets/styles/scss:assets/styles/css --no-source-map",
+    "compile:scss:watch": "sass --watch assets/styles/scss:assets/styles/css --no-source-map"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.68.0"
+  }
+}
