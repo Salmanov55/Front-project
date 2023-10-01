@@ -1,5 +1,9 @@
+* {
+  text-decoration: none;
+}
+
 .custom-container {
-  padding: 26px 48px;
+  padding: 16px 48px;
   background-color: rgb(227, 227, 227);
 }
 .custom-container .top-bar {
@@ -34,73 +38,159 @@
   align-items: flex-end;
 }
 
-.navbar .dropdown .dropdown-menu {
-  display: none;
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+* {
+  list-style: none;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 48px;
+a {
+  text-decoration: none !important;
 }
-.navbar .menu {
-  display: flex;
-  align-items: center;
-}
-.navbar .menu #varkala {
-  margin-right: 20px;
-}
-.navbar .menu a {
-  text-decoration: none;
-}
-.navbar .menu .dropdown-menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-.navbar .menu ul {
-  display: flex;
-  list-style: none;
-}
-.navbar .menu li {
-  margin-right: 20px;
-}
-.navbar .menu li:last-child {
-  margin-right: 0;
-}
-.navbar .search {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 300px;
-}
-.navbar .search input[type=text] {
-  margin-right: 10px;
-  font-size: 20px;
-}
-.navbar .search button {
-  font-size: 20px;
-  opacity: 0.5;
-}
-.navbar .nav-icons ul {
+
+.menu {
   list-style: none;
   padding: 0;
+  margin: 0;
+  padding: 16px 48px;
 }
-.navbar .nav-icons ul li {
+
+.menu-item {
+  position: relative;
   display: inline-block;
-  margin-left: 10px;
-  font-size: 20px;
+  margin-right: 20px;
 }
-.navbar .nav-icons ul li:first-child {
-  margin-left: 0;
-}
-.navbar .nav-icons ul li a {
-  text-decoration: none;
+
+.menu-link {
+  display: inline-block;
   color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(40px);
+  padding: 0;
+  animation: slideDown 0.3s ease-in-out forwards;
+  white-space: nowrap;
+}
+.submenu li {
+  list-style: none;
+}
+.submenu a {
+  color: #868e96;
+  padding: 0.4rem 1.5rem;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  background-color: transparent;
+}
+.submenu a:hover {
+  color: black;
+}
+
+.submenu.show {
+  display: block;
+}
+
+.mega-menu.show {
+  display: block;
+}
+
+.changelog__solid {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.arrow {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.mega-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  width: 1300px;
+  transform: translateY(30px);
+  padding: 0;
+  animation: slideDown 0.3s ease-in-out forwards;
+  white-space: nowrap;
+}
+
+.menu__shop {
+  max-width: 700px;
+}
+
+.menu__icon {
+  max-width: 800px;
+}
+
+.menu__pages {
+  left: -250px;
+}
+
+.link__icon a {
+  color: #000;
+  font-weight: 800;
+}
+
+.menu-categories {
+  float: left;
+  box-sizing: border-box;
+}
+.menu-categories ul {
+  padding: 0;
+}
+.menu-categories ul li a {
+  color: #868e96;
+  clear: both;
+  padding: 0.4rem 0;
+  display: block;
+  font-weight: 400;
+  color: #868e96;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  font-family: "vremenagrotesk", sans-serif;
+  font-size: 14px;
+}
+.menu-categories ul li a:hover {
+  color: black;
+}
+
+.menu-photos {
+  background-image: url("/img/kyle-loftus-596319-unsplash-cropped.jpg");
+  background-position: center;
+  background-size: cover;
+  min-width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
 }
 
 * {
@@ -118,4 +208,10 @@
   max-width: 1140px;
   width: 1140px;
   margin: 0 auto;
+}
+
+.cards-container {
+  width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
 }

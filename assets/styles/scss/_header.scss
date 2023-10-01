@@ -1,5 +1,16 @@
+$color_1: #333;
+$color_2: #868e96;
+$color_3: black;
+$color_4: #000;
+$font-family_1: "vremenagrotesk", sans-serif;
+$background-color_1: #f9f9f9;
+$background-color_2: transparent;
+
+*{
+    text-decoration: none;
+}
 .custom-container {
-    padding: 26px 48px;
+    padding: 16px 48px;
     background-color: rgb(227, 227, 227);
 
     .top-bar {
@@ -45,92 +56,145 @@
     }
 }
 
-.navbar {
-    .dropdown {
-        .dropdown-menu {
-            display: none;
-        }
-    }
+@keyframes slideDown {
+	0% {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(20px);
+	}
 }
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 48px;
-
-    .menu {
-        display: flex;
-        align-items: center;
-
-        #varkala {
-            margin-right: 20px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-
-        .dropdown-menu {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        ul {
-            display: flex;
-            list-style: none;
-        }
-
-        li {
-            margin-right: 20px;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
-
-    .search {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 300px;
-
-        input[type="text"] {
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
-        button {
-            font-size: 20px;
-            opacity: 0.5;
-        }
-    }
-
-    .nav-icons {
-        ul {
-            list-style: none;
-            padding: 0;
-
-            li {
-                display: inline-block;
-                margin-left: 10px;
-                font-size: 20px;
-
-                &:first-child {
-                    margin-left: 0;
-                }
-
-                a {
-                    text-decoration: none;
-                    color: #333;
-                }
-            }
-        }
-    }
+* {
+	list-style: none;
+}
+a {
+	text-decoration: none !important;
+}
+.menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+    padding: 16px 48px;
+}
+.menu-item {
+	position: relative;
+	display: inline-block;
+	margin-right: 20px;
+}
+.menu-link {
+	display: inline-block;
+	color: $color_1;
+	text-decoration: none;
+	font-weight: bold;
+}
+.submenu {
+	display: none;
+	position: absolute;
+	background-color: $background-color_1;
+	z-index: 1;
+	top: 100%;
+	left: 0;
+	opacity: 0;
+	transform: translateY(40px);
+	padding: 0;
+	animation: slideDown 0.3s ease-in-out forwards;
+	white-space: nowrap;
+	li {
+		list-style: none;
+	}
+	a {
+		color: $color_2;
+		padding: 0.4rem 1.5rem;
+		text-decoration: none;
+		display: block;
+		font-size: 14px;
+		font-weight: 400;
+		position: relative;
+		background-color: $background-color_2;
+		&:hover {
+			color: $color_3;
+		}
+	}
+}
+.submenu.show {
+	display: block;
+}
+.mega-menu.show {
+	display: block;
+}
+.changelog__solid {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+.arrow {
+	display: inline-block;
+	font-size: 12px;
+	margin-left: 5px;
+	transition: transform 0.3s ease;
+}
+.mega-menu {
+	display: none;
+	position: absolute;
+	background-color: $background-color_1;
+	z-index: 1;
+	top: 100%;
+	left: 0;
+	opacity: 0;
+	width: 1300px;
+	transform: translateY(30px);
+	padding: 0;
+	animation: slideDown 0.3s ease-in-out forwards;
+	white-space: nowrap;
+}
+.menu__shop {
+	max-width: 700px;
+}
+.menu__icon {
+	max-width: 800px;
+}
+.menu__pages {
+	left: -250px;
+}
+.link__icon {
+	a {
+		color: $color_4;
+		font-weight: 800;
+	}
+}
+.menu-categories {
+	float: left;
+	box-sizing: border-box;
+	ul {
+		padding: 0;
+		li {
+			a {
+				color: $color_2;
+				clear: both;
+				padding: 0.4rem 0;
+				display: block;
+				font-weight: 400;
+				color: $color_2;
+				text-align: inherit;
+				white-space: nowrap;
+				background-color: $background-color_2;
+				border: 0;
+				font-family: $font-family_1;
+				font-size: 14px;
+				&:hover {
+					color: $color_3;
+				}
+			}
+		}
+	}
+}
+.menu-photos {
+	background-image: url("/img/kyle-loftus-596319-unsplash-cropped.jpg");
+	background-position: center;
+	background-size: cover;
+	min-width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
 }

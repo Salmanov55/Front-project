@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,6 +17,7 @@
 </head>
 
 <body>
+
     <header>
         <div class="custom-container">
             <div class="top-bar">
@@ -27,68 +33,237 @@
                 </div>
                 <div class="language">
                     <a href="#">English</a>
-                    <!-- <div>
-                        <a href="#">German</a>
-                        <a href="#">French</a>
-                    </div> -->
                 </div>
             </div>
         </div>
-        <div class="navbar">
-            <div class="menu">
-                <a href="#" id="varkala">Varkala</a>
-                <ul>
-                    <li class="dropdown">
-                        <a href="#">Home</a>
-                        <button><i class="fa-solid fa-angle-up"></i></button>
-                        <div class="dropdown-menu">
-                            <a href="#">Home 1 - Fashion</a>
-                            <a href="#">Home 2 - Fashion</a>
-                            <a href="#">Home 3 - Desing</a>
-                            <a href="#">Home 4 - Desing</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Shop</a>
-                        <button><i class="fa-solid fa-angle-up"></i></button>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Icons</a>
-                        <button><i class="fa-solid fa-angle-up"></i></button>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Pages</a>
-                        <button><i class="fa-solid fa-angle-up"></i></button>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Docs</a>
-                        <button><i class="fa-solid fa-angle-up"></i></button>
-                        <div class="dropdown-menu">
-                            <a href="#">Introduction</a>
-                            <a href="#">Directory structure</a>
-                            <a href="#">Gulp</a>
-                            <a href="#">Customuzing CSS</a>
-                            <a href="#">Credits</a>
-                            <a href="#">Changelog</a>
-                            <a href="#">Bootstrap</a>
-                            <a href="#">Theme</a>
-                        </div>
-                    </li>
+        <ul class="menu">
+            <li class="menu-item">
+                <a class="menu-link" href="#">Home</a>
+                <i class="fas fa-chevron-up arrow"></i>
+                <ul class="submenu">
+                    <li><a href="#">Home 1 - Fashin</a></li>
+                    <li><a href="#">Home 2 - Fashin</a></li>
+                    <li><a href="#">Home 3 - Desing</a></li>
+                    <li><a href="#">Home 4 - Desing</a></li>
                 </ul>
-            </div>
-            <div class="search">
-                <input type="text" placeholder="Search">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-            <div class="nav-icons">
-                <ul>
-                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-bars-staggered"></i></a></li>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#">Shop</a>
+                <i class="fas fa-chevron-up arrow"></i>
+                <div class="mega-menu menu__shop">
+                    <div class="container">
+                        <div class="row gx-5">
+                            <div class="col-xxl-4">
+                                <div class="menu-categories">
+                                    <h3>Shop pages</h3>
+                                    <ul>
+                                        <li><a href="#">Full width</a></li>
+                                        <li><a href="#">Full width with category menu</a></li>
+                                        <li><a href="#">Full width with big products</a></li>
+                                        <li><a href="#">Fixed width</a></li>
+                                        <li><a href="#">Fixed width & sidebar</a></li>
+                                        <li><a href="#">Fixed width & masonry layout</a></li>
+                                        <li><a href="#">Subcategories</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4">
+                                <div class="menu-categories">
+                                    <h3>Product pages</h3>
+                                    <ul>
+                                        <li><a href="#">Product with sticky info</a></li>
+                                        <li><a href="#">Product with background</a></li>
+                                        <li><a href="#">Product standard Category </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4">
+                                <div class="menu-photos">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#">Icons</a>
+                <i class="fas fa-chevron-up arrow"></i>
+                <div class="mega-menu menu__icon">
+                    <div class="container">
+                        <div class="row gy-4 p-3">
+                            <div class="col-xxl-12">
+                                <div class="row">
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/jeans.png" width="64px" alt="jeans">
+                                        <a href="#">Trousers</a>
+                                    </div>
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/jacket.png" width="64px" alt="jacket">
+                                        <a href="#">Jackets</a>
+                                    </div>
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/shirt__.png" width="64px" alt="shirt__">
+                                        <a href="#">T-Shirts</a>
+                                    </div>
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/shirt.png" width="64px" alt="shirt">
+                                        <a href="#">Shirts</a>
+                                    </div>
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/sweater.png" width="64px" alt="sweater">
+                                        <a href="#">Pullovers</a>
+                                    </div>
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/scarf.png" width="64px" alt="scarf">
+                                        <a href="#">Scarfs</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-12">
+                                <div class="row">
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/shorts.png" width="64px" alt="shorts">
+                                        <a href="#">Shorts</a>
+                                    </div>
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/boxers.png" width="64px" alt="boxers">
+                                        <a href="#">Underwear</a>
+                                    </div>
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/watch.png" width="64px" alt="watch">
+                                        <a href="#">Watches</a>
+                                    </div>
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/briefcase.png" width="64px" alt="briefcase">
+                                        <a href="#">Bags</a>
+                                    </div>
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/hat.png" width="64px" alt="hat">
+                                        <a href="#">Caps</a>
+                                    </div>
+                                    <div class="col-xxl-2 d-flex flex-column align-items-center link__icon">
+                                        <img src="assets/img/icon/accessory.png" width="64px" alt="accessory">
+                                        <a href="#">Accessories</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="background-color:#bcac76;" class="p-3 text-center">
+                                <span style="font-weight: 600;">Don't miss our biggest sales this year. Use the code
+                                    "SUMMER35" at checkout until Jun. 15!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#">Pages</a>
+                <i class="fas fa-chevron-up arrow"></i>
+                <div class="mega-menu menu__pages">
+                    <div class="container">
+                        <div class="row gx-5">
+                            <div class="col-xxl-3 p-3">
+                                <div class="menu-categories">
+                                    <img src="assets/img/christopher-campbell-28571-unsplash.jpg" width="100%" alt="">
+                                    <h6 class="mt-3">Home</h6>
+                                    <ul>
+                                        <li><a href="index.html">Home page</a></li>
+                                        <li><a href="#">Full width with category menu</a></li>
+                                        <li><a href="#">Full width with big products</a></li>
+                                        <li><a href="#">Fixed width</a></li>
+                                        <li><a href="#">Fixed width & sidebar</a></li>
+                                        <li><a href="#">Fixed width & masonry layout</a></li>
+                                        <li><a href="#">Subcategories</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 p-3">
+                                <div class="menu-categories">
+                                    <img src="assets/img/ian-dooley-347962-unsplash.jpg" width="100%" alt="">
+                                    <h6 class="mt-3">About</h6>
+                                    <ul>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="#">Full width with category menu</a></li>
+                                        <li><a href="#">Full width with big products</a></li>
+                                        <li><a href="#">Fixed width</a></li>
+                                        <li><a href="#">Fixed width & sidebar</a></li>
+                                        <li><a href="#">Fixed width & masonry layout</a></li>
+                                        <li><a href="#">Subcategories</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 p-3">
+                                <div class="menu-categories">
+                                    <img src="assets/img/ian-dooley-347942-unsplash.jpg" width="100%" alt="">
+                                    <h6 class="mt-3">Orders</h6>
+                                    <ul>
+                                        <li><a href="order.html">Orders</a></li>
+                                        <li><a href="#">Full width with category menu</a></li>
+                                        <li><a href="#">Full width with big products</a></li>
+                                        <li><a href="#">Fixed width</a></li>
+                                        <li><a href="#">Fixed width & sidebar</a></li>
+                                        <li><a href="#">Fixed width & masonry layout</a></li>
+                                        <li><a href="#">Subcategories</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 p-3">
+                                <div class="menu-categories">
+                                    <img src="assets/img/photo-1534126511673-b6899657816a.jpg" width="100%" alt="">
+                                    <h6 class="mt-3">Blog</h6>
+                                    <ul>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="#">Full width with category menu</a></li>
+                                        <li><a href="#">Full width with big products</a></li>
+                                        <li><a href="#">Fixed width</a></li>
+                                        <li><a href="#">Fixed width & sidebar</a></li>
+                                        <li><a href="#">Fixed width & masonry layout</a></li>
+                                        <li><a href="#">Subcategories</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#">Docs</a>
+                <i class="fas fa-chevron-up arrow"></i>
+                <ul class="submenu">
+                    <li><a href="#">Introduction</a></li>
+                    <li><a href="#">Directory structure</a></li>
+                    <li><a href="#">Gulp</a></li>
+                    <li><a href="#">Customizing CSS</a></li>
+                    <li><a href="#">Credits</a></li>
+                    <li class="changelog__solid"><a href="#">Changelog</a></li>
+                    <li><a href="#">Bootstrap</a></li>
+                    <li><a href="#">Theme</a></li>
                 </ul>
-            </div>
-        </div>
+            </li>
+            <li class="menu-item">
+                <div class="flex items-center ml-[450px]">
+                    <input class="w-[184px] h-[30px] border-none" type="text" placeholder="Search">
+                    <div class="p-2">
+                        <button class="text-xl border-none"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <ul class="flex items-center justify-end space-x-4 ml-[170px]">
+                    <li><a href="login.html"
+                            class="text-xl text-gray-600 hover:text-[#BCAC76] transition-colors duration-300 ease-in-out"><i
+                                class="fa-regular fa-user"></i></a></li>
+                    <li><a href="#"
+                            class="text-xl text-gray-600 hover:text-[#BCAC76] transition-colors duration-300 ease-in-out"><i
+                                class="fa-regular fa-heart"></i></a></li>
+                    <li><a href="#"
+                            class="text-xl text-gray-600 hover:text-[#BCAC76] transition-colors duration-300 ease-in-out"><i
+                                class="fa-solid fa-bag-shopping"></i></a></li>
+                    <li><a href="#"
+                            class="text-xl text-gray-600 hover:text-[#BCAC76] transition-colors duration-300 ease-in-out"><i
+                                class="fa-solid fa-bars-staggered"></i></a></li>
+                </ul>
+            </li>
+        </ul>
     </header>
 
     <main class="indexmain">
@@ -98,7 +273,7 @@
                 d="M400.5,324Q337,408,244.5,400Q152,392,99.5,316Q47,240,91,149Q135,58,227,80.5Q319,103,391.5,171.5Q464,240,400.5,324Z" />
         </svg>
         <section class="slider">
-            <div class="slider-container flex justify-center items-center active-slide block">
+            <div class="slider-container flex justify-center items-center active-slide block" draggable="true">
                 <div class="text mr-[80px]">
                     <p class="text-2xl font-light">TIME IS ALMOST UP</p>
                     <h2 class="text-7xl font-mono font-black w-[80vh] mb-[70px]">Design clocks on sale</h2>
@@ -118,7 +293,7 @@
                 </div>
             </div>
 
-            <div class="slider-container hidden flex justify-center items-center">
+            <div class="slider-container hidden flex justify-center items-center" draggable="true">
                 <div class="text mr-[80px]">
                     <p class="text-2xl font-light">OUR ALL-TIME FAVOURITES</p>
                     <h2 class="text-7xl font-mono font-black">BOXXEZ</h2>
@@ -140,7 +315,7 @@
                 </div>
             </div>
 
-            <div class="slider-container hidden flex justify-center items-center">
+            <div class="slider-container hidden flex justify-center items-center" draggable="true">
                 <div class="text mr-[80px]">
                     <p class="text-2xl font-light">OUR ALL-TIME FAVOURITES</p>
                     <h2 class="text-7xl font-mono font-black">BLACK & WHITE</h2>
@@ -356,7 +531,7 @@
                 <path fill="#f7efcb"
                     d="M374.5,330Q344,420,251,401Q158,382,85,311Q12,240,84.5,168.5Q157,97,254.5,72Q352,47,378.5,143.5Q405,240,374.5,330Z" />
             </svg>
-            <div class="cards-container px-[200px] py-[96px]">
+            <div class="cards-container px-[20px] py-[96px]">
                 <h2 class="text-4xl font-bold font-mono">New Arrivals</h2>
                 <p class="text-2xl mt-[20px] text-[#868e96] mb-[48px]">
                     One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed
@@ -367,14 +542,24 @@
                     <div class="text-lg font-mono products">
                         <ul class="flex gap-6 ">
                             <li><a href="#" class="relative hover:underline">All Products</a></li>
-                            <li><a href="#" class="relative text-[#868E96] hover:text-[black] duration-300 hover:underline">Chairs</a></li>
-                            <li><a href="#" class="relative text-[#868E96] hover:text-[black] duration-300 hover:underline">Books</a></li>
-                            <li><a href="#" class="relative text-[#868E96] hover:text-[black] duration-300 hover:underline">Clothes</a></li>
-                            <li><a href="#" class="relative text-[#868E96] hover:text-[black] duration-300 hover:underline">Accessories</a></li>
+                            <li><a href="#"
+                                    class="relative text-[#868E96] hover:text-[black] duration-300 hover:underline">Chairs</a>
+                            </li>
+                            <li><a href="#"
+                                    class="relative text-[#868E96] hover:text-[black] duration-300 hover:underline">Books</a>
+                            </li>
+                            <li><a href="#"
+                                    class="relative text-[#868E96] hover:text-[black] duration-300 hover:underline">Clothes</a>
+                            </li>
+                            <li><a href="#"
+                                    class="relative text-[#868E96] hover:text-[black] duration-300 hover:underline">Accessories</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="all">
-                        <a href="#" class="text-base mr-[11px] font-bold text-[#BCAC76] hover:text-[#877f64] duration-200 relative hover:underline">ALL PRODUCTS</a>
+                        <a href="#"
+                            class="text-base mr-[11px] font-bold text-[#BCAC76] hover:text-[#877f64] duration-200 relative hover:underline">ALL
+                            PRODUCTS</a>
                     </div>
                 </div>
 
@@ -383,11 +568,15 @@
                         <div>
                             <a href="#" class="block">
                                 <div class="">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair.jpg" alt="product.photo" class="w-full h-auto">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair-2.jpg" alt="product.photo" class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair.jpg"
+                                        alt="product.photo" class="w-full h-auto">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair-2.jpg"
+                                        alt="product.photo"
+                                        class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
                                 </div>
                             </a>
-                            <div class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
+                            <div
+                                class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
                                 <a href="" class="relative group ml-[20px]">
                                     <span>Add to cart</span>
                                 </a>
@@ -402,7 +591,8 @@
                             </div>
                         </div>
                         <div class="relative">
-                            <h3 class="text-lg font-mono font-semibold absolute -top-[30px]"><a href="#">Norwegg Chair</a></h3>
+                            <h3 class="text-lg font-mono font-semibold absolute -top-[30px]"><a href="#">Norwegg
+                                    Chair</a></h3>
                             <span class="text-[#868E96]">$40.00</span>
                         </div>
                     </div>
@@ -411,11 +601,15 @@
                         <div>
                             <a href="#" class="block">
                                 <div class="">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/book.jpg" alt="product.photo" class="w-full h-auto">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/book-2.jpg" alt="product.photo" class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/book.jpg"
+                                        alt="product.photo" class="w-full h-auto">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/book-2.jpg"
+                                        alt="product.photo"
+                                        class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
                                 </div>
                             </a>
-                            <div class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
+                            <div
+                                class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
                                 <a href="" class="relative group ml-[20px]">
                                     <span>Add to cart</span>
                                 </a>
@@ -439,11 +633,15 @@
                         <div>
                             <a href="#" class="block">
                                 <div class="">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair2.jpg" alt="product.photo" class="w-full h-auto">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair2-2.jpg" alt="product.photo" class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair2.jpg"
+                                        alt="product.photo" class="w-full h-auto">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair2-2.jpg"
+                                        alt="product.photo"
+                                        class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
                                 </div>
                             </a>
-                            <div class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
+                            <div
+                                class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
                                 <a href="" class="relative group ml-[20px]">
                                     <span>Add to cart</span>
                                 </a>
@@ -458,7 +656,8 @@
                             </div>
                         </div>
                         <div class="relative">
-                            <h3 class="text-lg font-mono font-semibold absolute -top-[30px]"><a href="#">Another Chair</a></h3>
+                            <h3 class="text-lg font-mono font-semibold absolute -top-[30px]"><a href="#">Another
+                                    Chair</a></h3>
                             <span class="text-[#868E96]">$40.00</span>
                         </div>
                     </div>
@@ -467,11 +666,15 @@
                         <div>
                             <a href="#" class="block">
                                 <div class="">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair3.jpg" alt="product.photo" class="w-full h-auto">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair3-3.jpg" alt="product.photo" class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair3.jpg"
+                                        alt="product.photo" class="w-full h-auto">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair3-3.jpg"
+                                        alt="product.photo"
+                                        class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
                                 </div>
                             </a>
-                            <div class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
+                            <div
+                                class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
                                 <a href="" class="relative group ml-[20px]">
                                     <span>Add to cart</span>
                                 </a>
@@ -486,7 +689,8 @@
                             </div>
                         </div>
                         <div class="relative">
-                            <h3 class="text-lg font-mono font-semibold absolute -top-[30px]"><a href="#">Your new Chair</a></h3>
+                            <h3 class="text-lg font-mono font-semibold absolute -top-[30px]"><a href="#">Your new
+                                    Chair</a></h3>
                             <span class="text-[#868E96]">$40.00</span>
                         </div>
                     </div>
@@ -495,11 +699,15 @@
                         <div>
                             <a href="#" class="block">
                                 <div class="">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/clock.jpg" alt="product.photo" class="w-full h-auto">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/clock-2.jpg" alt="product.photo" class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/clock.jpg"
+                                        alt="product.photo" class="w-full h-auto">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/clock-2.jpg"
+                                        alt="product.photo"
+                                        class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
                                 </div>
                             </a>
-                            <div class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
+                            <div
+                                class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
                                 <a href="" class="relative group ml-[20px]">
                                     <span>Add to cart</span>
                                 </a>
@@ -523,11 +731,15 @@
                         <div>
                             <a href="#" class="block">
                                 <div class="">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/clock3.jpg" alt="product.photo" class="w-full h-auto">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/clock3-2.jpg" alt="product.photo" class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/clock3.jpg"
+                                        alt="product.photo" class="w-full h-auto">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/clock3-2.jpg"
+                                        alt="product.photo"
+                                        class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
                                 </div>
                             </a>
-                            <div class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
+                            <div
+                                class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
                                 <a href="" class="relative group ml-[20px]">
                                     <span>Add to cart</span>
                                 </a>
@@ -551,11 +763,15 @@
                         <div>
                             <a href="#" class="block">
                                 <div class="">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/box.jpg" alt="product.photo" class="w-full h-auto">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/box-2.jpg" alt="product.photo" class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/box.jpg"
+                                        alt="product.photo" class="w-full h-auto">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/box-2.jpg"
+                                        alt="product.photo"
+                                        class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
                                 </div>
                             </a>
-                            <div class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
+                            <div
+                                class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
                                 <a href="" class="relative group ml-[20px]">
                                     <span>Add to cart</span>
                                 </a>
@@ -570,7 +786,8 @@
                             </div>
                         </div>
                         <div class="relative">
-                            <h3 class="text-lg font-mono font-semibold absolute -top-[30px]"><a href="#">Accessory Box</a></h3>
+                            <h3 class="text-lg font-mono font-semibold absolute -top-[30px]"><a href="#">Accessory
+                                    Box</a></h3>
                             <span class="text-[#868E96]">$40.00</span>
                         </div>
                     </div>
@@ -579,11 +796,15 @@
                         <div>
                             <a href="#" class="block">
                                 <div class="">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/box2.jpg" alt="product.photo" class="w-full h-auto">
-                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/box-2.jpg" alt="product.photo" class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/box2.jpg"
+                                        alt="product.photo" class="w-full h-auto">
+                                    <img src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/box-2.jpg"
+                                        alt="product.photo"
+                                        class="w-full h-auto absolute top-0 opacity-0 group-hover:opacity-100">
                                 </div>
                             </a>
-                            <div class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
+                            <div
+                                class="flex justify-between items-center h-[40px] border bg-[white] opacity-0 duration-500 hover:opacity-100 transform translate-y-0 group-hover:translate-y-[-40px]">
                                 <a href="" class="relative group ml-[20px]">
                                     <span>Add to cart</span>
                                 </a>
@@ -603,24 +824,178 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </section>
 
         <section>
-            <div class="mx-[190px] h-[430px]">
-                <div class="w-[295px] h-[295px] absolute left-0">
-                    <svg id="10015.io" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-                        <path fill="#bcac76" d="M398,314.5Q326,389,225,414.5Q124,440,65,340Q6,240,63.5,137Q121,34,221,66.5Q321,99,395.5,169.5Q470,240,398,314.5Z" />
+            <div class="mx-[190px] h-[430px] bg-[#f7eab5] mb-[50px] relative">
+                <div class="w-[295px] h-[295px] absolute left-[-150px]">
+                    <svg id="10015.io" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path fill="#bcac76"
+                            d="M398,314.5Q326,389,225,414.5Q124,440,65,340Q6,240,63.5,137Q121,34,221,66.5Q321,99,395.5,169.5Q470,240,398,314.5Z" />
                     </svg>
                 </div>
                 <div>
-                    <img src="" alt="">
+                    <img class="w-[249px] h-[430px] ml-[850px] absolute bottom-[50px]"
+                        src="https://d19m59y37dris4.cloudfront.net/varkala/1-2-1/img/product/chair-transparent.png"
+                        alt="photo">
+                </div>
+                <div class="absolute top-[140px] right-[280px] text">
+                    <h4 class="text-center text-6xl font-mono font-extrabold mb-[20px]">Summer Sales</h4>
+                    <h5 class="text-center text-3xl mb-[30px]">Our biggest sales this year — up to 60% off!</h5>
+                    <div class="flex items-center justify-center">
+                        <h3 class="text-lg">
+                            <a href="#"
+                                class="border font-semibold border-black w-[200px] h-[40px] flex items-center justify-center hover:bg-[black] duration-300 hover:text-[white]">START
+                                SHOPPING</a>
+                        </h3>
+                    </div>
                 </div>
             </div>
+
         </section>
     </main>
+
+    <footer>
+        <div class="flex items-center justify-center gap-[90px] bg-[#f8f9fa] py-[96px]">
+            <div class="flex items-center gap-[15px]">
+                <i class="fa-solid fa-truck-moving text-2xl"></i>
+                <div>
+                    <h6 class="font-semibold">Free shipping & return</h6>
+                    <p class="text-[#868E96]">Free Shipping over $300</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-[15px]">
+                <i class="fa-solid fa-comments-dollar text-2xl"></i>
+                <div>
+                    <h6 class="font-semibold">Money back guarantee</h6>
+                    <p class="text-[#868E96]">30 Days Money Back Guarantee</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-[15px]">
+                <i class="fa-regular fa-money-bill-1 text-2xl"></i>
+                <div>
+                    <h6 class="font-semibold">Best prices</h6>
+                    <p class="text-[#868E96]">Always the best prices</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-[15px]">
+                <i class="fa-solid fa-headset text-2xl"></i>
+                <div>
+                    <h6 class="font-semibold">020-800-456-747</h6>
+                    <p class="text-[#868E96]">24/7 Available Support</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex py-[96px] mx-[190px]">
+            <div class="w-[480px] pr-[96px] h-[205px]">
+                <h6 class="text-lg font-semibold mb-[30px]">Be in touch</h6>
+                <p class="mb-[30px] text-[#868E96]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque
+                    temporibus.</p>
+                <form action="#">
+                    <div class="flex border-b-gray-700 border">
+                        <input class="py-[6px] pr-[12px] w-[340px] h-[36px]" type="email"
+                            placeholder="Your Email Address">
+                        <div>
+                            <button><i class="fa-regular fa-envelope text-3xl"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <div class="flex gap-[190px]">
+                    <div>
+                        <h6 class="mb-[25px] font-bold">Shop</h6>
+                        <ul>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">For
+                                    Men</a>
+                            </li>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">For
+                                    Women</a>
+                            </li>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Stores</a>
+                            </li>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Our
+                                    Blog</a>
+                            </li>
+                            <li class="text-[#868E96] font-semibold group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Shop</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h6 class="mb-[25px] font-bold">Company</h6>
+                        <ul>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Login</a>
+                            </li>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Register</a>
+                            </li>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Wishlist</a>
+                            </li>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Our
+                                    Products</a>
+                            </li>
+                            <li class="font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Checkouts</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h6 class="mb-[25px] font-bold">Your account</h6>
+                        <ul>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Login</a>
+                            </li>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Register</a>
+                            </li>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Wishlist</a>
+                            </li>
+                            <li class="mb-[8px] font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-300">Our
+                                    Products</a>
+                            </li>
+                            <li class="font-semibold text-[#868E96] group">
+                                <a href="#"
+                                    class="group-hover:border-b-[2px] border-[transparent] hover:border-black transition-all duration-200">Checkouts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
 </body>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<script src="https://kit.fontawesome.com/0af7f83e73.js" crossorigin="anonymous"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="assets/js/main.js"></script>
 
